@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Taps</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="apple-touch-icon" href="favicon.png">
+        <meta name="apple-mobile-web-app-title" content="">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="leaderboard">
+            <h2>Leaderboard</h2>
+            <form id="nameForm">
+                <input type="text" id="playerName" placeholder="Enter your name" required>
+                <button type="submit">Submit</button>
+            </form>
+            <ul id="leaderboardList"></ul>
+        </div>
+
+        <div class="container">
+            <h1>Tap Challenge <br> Game</h1>
+            <div id="progressBarContainer">
+                <svg>
+                    <circle cx="60" cy="60" r="50"></circle>
+                    <circle id="timeProgress" cx="60" cy="60" r="50"></circle>
+                </svg>
+                <div id="timeLeft">10</div>
+            </div>
+            <div id="game">
+                <button id="tapButton"></button>
+                <p id="scoreContainer">Score: <span id="score">0</span></p>
+                <p id="highScoreDisplay">High Score: <span id="highScore">0</span></p>
+            </div>
+            <button id="restartButton" style="display: none;">Restart Game</button>
+        </div>
+
+    \
+        <script src="scripts.js" async defer></script>
+    </body>
+</html>

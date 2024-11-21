@@ -1,0 +1,121 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 6rem;
+    color: white;
+    text-shadow: 2px 2px 5px grey;
+}
+
+#tapButton {
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    margin: 20px auto;
+    background-color: #950606;
+    border: none;
+    border-radius: 50%; /* Makes the button circular */
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+#tapButton::before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 5px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+#tapButton:hover {
+    background-color: darkred;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+#tapButton:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#scoreContainer, #highScoreDisplay {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#progressBarContainer {
+    margin: 20px auto;
+    width: 20px;
+    height: 120px;
+    position: relative;
+}
+
+svg {
+    width: 120px;
+    height: 120px;
+}
+
+circle {
+    fill: none;
+    stroke-width: 10;
+    stroke: #ccc;
+}
+
+#timeProgress {
+    stroke: white;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.3s;
+}
+
+#timeLeft {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+#leaderboard {
+    margin-top: 300px;
+    font-size: 1.2rem;
+    position:absolute;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #008cba;
+    color: white;
+}
+
+button:hover {
+    background-color: #007bb5;
+}
